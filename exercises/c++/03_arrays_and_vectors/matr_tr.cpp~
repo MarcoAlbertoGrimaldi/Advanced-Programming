@@ -1,0 +1,32 @@
+#include <iostream>
+#include <array>
+
+using namespace std;
+
+int main() {
+
+  const unsigned int n_row{128};
+  const unsigned int n_col{128};
+  
+  array<double,(n_row*n_col)> mat{0};
+
+  for(unsigned int r{0}; r<n_row; ++r) {
+    for(unsigned int c{0}; c<n_col; ++c) {
+
+	mat[n_row*r+c] = n_row*r+c;
+	cout << mat[n_row*r+c] << " ";
+
+     }
+
+    cout << "\n";
+     
+   }
+
+     
+
+}
+
+
+  void transpose(double){
+
+  }

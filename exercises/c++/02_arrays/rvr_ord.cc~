@@ -1,0 +1,35 @@
+#include <iostream>
+
+template <typename T>
+T read(const unsigned int l);
+
+int main () {
+
+ unsigned int l{0};
+  
+ std::cout << "Please insert array lenght:\n";
+ std::cin >> l;
+
+ int_arr = read<double>(l);
+
+ std::cout << int_arr;
+ 
+}
+
+ template <typename T>
+ T* read(const unsigned int l) {
+
+   T* array{new T[n]};
+
+   for (std::size_t i{0}; i < l; ++i) {
+   
+   std::cout << "Please insert array element n° " << i <<":\n";
+   std::cin >> array[i];
+
+   return array;
+
+   }
+
+
+
+ 

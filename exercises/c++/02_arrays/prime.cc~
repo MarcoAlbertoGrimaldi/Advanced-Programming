@@ -1,0 +1,50 @@
+#include <iostream>
+
+bool isprime(unsigned int n);
+
+int main() {
+
+  bool is_prime_list[100];
+  unsigned int counter{0};
+  
+  for(unsigned int i{1}; i<=100; i++) {
+    
+   is_prime_list[i] = isprime(i);
+
+    if(is_prime_list[i]) {
+      counter++;
+    }
+    
+  }
+
+  std::cout << counter;
+
+  unsigned int prime_list[counter];
+
+  unsigned int c{0};
+
+  for(unsigned int i{1}; i<=100; i++) {
+
+    if(is_prime_list[i]) {
+      prime_list[c]=i;
+
+      std::cout << prime_list[c] << std::endl;
+      c++;
+    }
+  }
+}
+
+
+bool isprime(unsigned int n) {
+
+  unsigned int i{1};
+
+  while((n%i != 0) && i < n) {
+
+    i++;
+
+  }
+
+  return (i==n);
+
+}
