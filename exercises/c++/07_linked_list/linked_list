@@ -1,0 +1,7 @@
+create a linked list class with:
+push.back
+    .front
+operator *, ++
+std::vectors<T> v(10)
+std::copy(l.begin(), l.end(), v.begin())
+iterator class

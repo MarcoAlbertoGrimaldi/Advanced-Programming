@@ -9,7 +9,7 @@ class Vector {
   explicit Vector(const std::size_t length)
       : elem{new num[length]{}}, _size{length} {}
 
-  ~Vector() noexcept { delete[] elem; }
+  ~Vector() noexcept { delete[] elem; } //n noexcept is a promise to the compiler that no exceptions will be thrown
 
   const num& operator[](const std::size_t& i) const noexcept { return elem[i]; }
   num& operator[](const std::size_t& i) noexcept { return elem[i]; }

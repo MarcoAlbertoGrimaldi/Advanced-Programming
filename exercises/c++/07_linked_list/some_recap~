@@ -1,0 +1,17 @@
+
+date d;
+date* p=&d;
+date& r=d
+
+(*p).day(); dereferenced pointer equal to p->day(); or r.day();
+
+nullpointer is the 0 of the memory
+can't apper at nullpointer
+nullpointer can point to nullpointer(nobody), reference can't
+
+p->operator=(b);  //operator equal overloaded in class declaration maybe
+(*p)=b; 	  //using dereferenced pointer
+
+std::move semantic allow to swap without hard copying 
+
+b = std::move(a) a now is unknown

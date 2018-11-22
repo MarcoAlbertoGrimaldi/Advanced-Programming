@@ -1,0 +1,42 @@
+
+date d;
+date* p=&d;
+date& r=d
+
+(*p).day(); dereferenced pointer equal to p->day(); or r.day();
+
+nullpointer is the 0 of the memory
+can't apper at nullpointer
+nullpointer can point to nullpointer(nobody), reference can't
+
+p->operator=(b);  //operator equal overloaded in class declaration maybe
+(*p)=b; 	  //using dereferenced pointer
+
+std::move semantic allow to swap without hard copying 
+
+b = std::move(a) a now is unknown
+
+template<class T>
+class Vector{
+        std::unique_ptr<T[]> elem;
+   public:
+	Vector() = default;
+	Vector(const Vector&) = delete; //assure nobody can copy
+	Vector(Vector&&) = default;
+	Vector& operator=(const Vector&v);	a = b;
+	Vector& operator=(Vector&&);		a = Vector <T> {b};
+
+	Vector<T> operator+(const Vector v1, const Vector v2) {
+		  for(i=0; i<size; ++i)
+		  	   res[i] = v1[i] + v2[i];
+		  return res;
+		  }
+	Vector<T> operator+(Vector v1, const Vector v2){
+		  return std::forward<Vector>(v1+=v2);		//using move
+		  }
+};
+		  
+class Vector:public std::vector<T>{
+   public:
+	using std::vector<T>::vector;
+	

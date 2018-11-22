@@ -10,7 +10,7 @@ month& operator++ (month& m) {
 }
 
 
-// std::istream& operator>>(std::istream& is, month& m) {
+// std::istream& operator>>(std::istream& is, Date& d) {
     
 // };
 
